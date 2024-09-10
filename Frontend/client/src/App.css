@@ -36,3 +36,23 @@
     transform: rotate(360deg);
   }
 }
+
+.show-orders-nav,
+.add-order-nav {
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #282c34;
+  text-decoration: none; /* Убираем подчеркивание по умолчанию */
+}
+
+.show-orders-nav:hover,
+.add-order-nav:hover {
+  color: #007bff; /* Цвет при наведении */
+}
+
+.show-orders-nav:active,
+.add-order-nav:active {
+  color: #0056b3; /* Цвет при клике */
+} 
