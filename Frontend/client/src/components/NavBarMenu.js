@@ -12,6 +12,7 @@ function NavBarMenu() {
                     <Nav className="me-auto">
                        <NavLink className="show-orders-nav" to="/">Orders</NavLink>
                        <NavLink className="add-order-nav" to="addOrder">Add Order</NavLink>
+                       <NavLink className="nav-order-detail" to="orderDetail">Order Detail</NavLink>
                     </Nav>
                 </Container>
             </Navbar>

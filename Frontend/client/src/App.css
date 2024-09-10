@@ -56,3 +56,20 @@
 .add-order-nav:active {
   color: #0056b3; /* Цвет при клике */
 } 
+
+.nav-order-detail {
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #282c34;
+  text-decoration: none; /* Убираем подчеркивание по умолчанию */
+}
+
+.nav-order-detail:hover {
+  color: #007bff; /* Цвет при наведении */
+}
+
+.nav-order-detail:active{
+  color: #0056b3; /* Цвет при клике */
+}

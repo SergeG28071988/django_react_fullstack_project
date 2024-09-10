@@ -1,9 +1,13 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 
 const AddOrder = () => {
+
+    const [image, setImage] = useState(null)
+
+
     return (
         <div>
-            <h1>Add Order</h1>
+            <h1>Добавить заказ</h1>
         </div>
     );
 

@@ -4,6 +4,7 @@ import ShowOrders from './components/ShowOrders';
 import AddOrder from './components/AddOrder';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NavBarMenu from './components/NavBarMenu';
+import OrderDetail from './components/OrderDetail';
 
 function App() {
   return (
@@ -12,10 +13,10 @@ function App() {
          <NavBarMenu/>
           <Routes>
             <Route exact path="/" element={<ShowOrders />} />
-            <Route exact path="addOrder" element={<AddOrder />} />            
+            <Route exact path="addOrder" element={<AddOrder />} />    
+            <Route exact path="orderDetail" element={<OrderDetail />} />                  
           </Routes>
-      </BrowserRouter>
-      
+      </BrowserRouter>      
     </div>
   );
 }
