@@ -3,7 +3,8 @@ from .models import Order
 
 
 
-class OrderSerializer():
-    pass
+class OrderSerializer(serializers.ModelSerializer):
+        model = Order
+        fields = '__all__'
 
 
