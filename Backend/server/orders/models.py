@@ -10,10 +10,21 @@ class Order(models.Model):
     photo = models.ImageField(upload_to='uploads/images',
                               help_text="Введите фото",
                               verbose_name="Фото товара",
-                              null=False, blank=False)
+                              null=False, blank=False)  
 
-    order_number = models.CharField(max_length=100, verbose_name='Номер заказа', null=False, blank=False)
-    client = models.CharField(max_length=100, related_name='orders', verbose_name='Клиент')
+    order_number = models.CharField(max_length=100, verbose_name='Номер заказа', null=False, blank=False)    
+    client = models.CharField(max_length=100, verbose_name='Клиент', null=False, blank=False)
+    name = models.CharField(max_length=100, help_text="Введите товар", verbose_name="Товар", null=False, blank=False)
+    CATEGORY_CHOICES = [
+        ('Процессоры', 'Процессоры'),
+        ('Материнские платы', 'Материнские платы'),
+        ('Видеокарты', 'Видеокарты'),
+        ('Оперативная память', 'Оперативная память'),
+        ('SSD-диски', 'SSD-диски'),
+        ('HDD-диски', 'HDD-диски'),
+        ('Блоки питания>', 'Блоки питания'),
+    ]
+    category = models.CharField(max_length=50, choices=CATEGORY_CHOICES, verbose_name='Категория', null=True, blank=True)
     date_created = models.DateField(verbose_name='Дата создания')
     ORDER_STATUS_CHOICES = [
         ('Поступил', 'Поступил'),
@@ -35,4 +46,3 @@ class Order(models.Model):
 def update_completion_date(sender, instance, **kwargs):
     if instance.completed and not instance.completion_date:
         instance.completion_date = instance.date_created
-        
