@@ -22,7 +22,7 @@ class Order(models.Model):
         ('Оперативная память', 'Оперативная память'),
         ('SSD-диски', 'SSD-диски'),
         ('HDD-диски', 'HDD-диски'),
-        ('Блоки питания>', 'Блоки питания'),
+        ('Блоки питания', 'Блоки питания'),
     ]
     category = models.CharField(max_length=50, choices=CATEGORY_CHOICES, verbose_name='Категория', null=True, blank=True)
     date_created = models.DateField(verbose_name='Дата создания')

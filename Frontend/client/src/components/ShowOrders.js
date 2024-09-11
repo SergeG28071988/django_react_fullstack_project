@@ -29,6 +29,7 @@ const ShowOrders = () => {
                         <th>Клиент</th>
                         <th>Название</th>
                         <th>Категория</th>
+                        <th>Статус</th>
                         <th>Дата создания</th>
                         <th>Выполнен</th>
                         <th>Дата выполнения</th>
@@ -43,6 +44,7 @@ const ShowOrders = () => {
                             <td>{order.client}</td>
                             <td>{order.name}</td>
                             <td>{order.category}</td>
+                            <td>{order.status}</td>
                             <td>{order.date_created}</td>
                             <td>{order.completed ? 'Да' : 'Нет'}</td> 
                             <td>{order.completion_date}</td>
