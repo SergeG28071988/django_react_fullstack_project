@@ -46,5 +46,3 @@ class Order(models.Model):
 def update_completion_date(sender, instance, **kwargs):
     if instance.completed and not instance.completion_date:
         instance.completion_date = instance.date_created
-
-files = models.FileField(upload_to='uploads/files')
