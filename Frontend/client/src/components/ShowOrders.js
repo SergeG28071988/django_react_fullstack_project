@@ -63,7 +63,7 @@ const ShowOrders = () => {
                 <tbody>
                        {filteredOrders.map((order, index) => (
                         <tr key={index}> 
-                            <td><img src={order.photo} alt="Order Photo" style={{ maxWidth: '100px' }} /></td> 
+                            <img src={order.photo} alt={`Order #${order.id}`} style={{ maxWidth: '100px' }} />
                             <td>{order.order_number}</td>
                             <td>{order.client}</td>
                             <td>{order.name}</td>
